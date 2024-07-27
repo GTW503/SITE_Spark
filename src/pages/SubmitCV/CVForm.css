@@ -1,0 +1,93 @@
+.cv-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cv-form-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; /* Réduire la largeur à 90% */
+  max-width: 900px;
+  max-height: 90%; /* Ajouter une hauteur maximale */
+  overflow-y: auto; /* Permettre le défilement vertical */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: slideIn 0.5s ease;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001; /* Assurer que le bouton est toujours au-dessus */
+}
+
+.cv-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group, .full-width {
+  flex: 1 1 45%; /* Flex basis 45% for horizontal alignment */
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  flex: 1 1 100%; /* Full width for larger inputs */
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-group, .full-width {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}

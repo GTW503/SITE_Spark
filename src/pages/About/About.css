@@ -1,0 +1,125 @@
+.about-container {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.about-section,
+.ongoing-projects-section,
+.client-reviews-section {
+  padding: 60px 20px;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-section {
+  background: linear-gradient(to right, #0f1107, #a34d0b);
+}
+
+.ongoing-projects-section {
+  background: linear-gradient(to right, #1c1227, #081731);
+  color: white;
+}
+
+.client-reviews-section {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: white;
+  animation: slideInFromTop 1s ease-in-out;
+}
+
+.offers,
+.projects,
+.reviews {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offer-card,
+.project-card,
+.review-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  flex: 1 1 calc(25% - 40px);
+  max-width: calc(25% - 40px);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover,
+.project-card:hover,
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img,
+.review-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img,
+.review-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card h3,
+.review-card h4 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.project-card p,
+.review-card p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
